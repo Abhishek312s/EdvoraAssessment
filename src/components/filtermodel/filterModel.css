@@ -1,0 +1,51 @@
+.filter-wrapper{
+    width: 15%;
+    min-width: 200px;
+    margin: 35px;
+    /* height: 275px; */
+    /* border: 2px solid orangered; */
+}
+
+.filter-container{
+    background-color: #131313;
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.filter-container input{
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #b9b9b9;
+    color: #A5A5A5;
+    padding-bottom:5px;
+    font-size: 1.5rem;
+}
+
+.filter-container .filters{
+    margin: 30px 0;
+}
+
+
+.filter-container .filters select{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 14px;
+    background-color: #232323;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-image: url("../../dropdown.png");
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: auto 30%;
+    appearance: none;
+}
+

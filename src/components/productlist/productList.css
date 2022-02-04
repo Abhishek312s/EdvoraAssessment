@@ -1,0 +1,26 @@
+
+.list-container #sub-head {
+    display: block;
+    border-bottom: 1px solid rgba(203, 203, 203, 0.5);
+    padding-bottom: 15px;
+    font-weight: 300;
+    font-size: 1.8rem;
+    margin-top: 25px;
+    color: #fff;
+}
+
+/* .carousel-container{
+    background-color: aqua;
+} */
+.cards{
+    background-color: #131313;
+    margin: 10px 0;
+    /* border: 2px solid red; */
+    /* display: flex;
+    justify-content: space-around; */
+    max-width: 1200px;
+    /* flex-direction: column; */
+    margin-bottom: 40px;
+    border-radius: 10px;
+
+}

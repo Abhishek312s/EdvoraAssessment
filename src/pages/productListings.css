@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  /* border: 2px solid rebeccapurple; */
+}
+
+.container main {
+  margin-top: 35px;
+  flex: 0 0 75%;
+  /* border: 2px solid red; */
+}
+
+.container main h1 {
+  font-size: 2.9rem;
+  color: rgba(255, 255, 255, 0.87);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.5px;
+}
+
+.container main h2 {
+    font-weight: 500;
+    font-size: 2rem;
+    margin-top: 15px;
+  color: rgb(146, 146, 146);
+}
