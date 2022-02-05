@@ -18,9 +18,10 @@
     /* border: 2px solid red; */
     /* display: flex;
     justify-content: space-around; */
-    max-width: 1200px;
+    max-width: 1150px;
+    /* max-height: 300px; */
     /* flex-direction: column; */
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     border-radius: 10px;
 
 }

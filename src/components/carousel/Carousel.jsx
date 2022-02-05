@@ -4,16 +4,18 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ProductCard from "../productcard/ProductCard";
 
-function Carousel({productData}) {
+function Carousel({filteredProducts}) {
 
+  // console.log(filteredProducts)
     function SampleNextArrow(props) {
         const { className, style, onClick } = props;
         return (
           <div
             className={className}
-            style={{ ...style, display: "block", background: "red" }}
+            style={{ ...style, display: "block"}}
             onClick={onClick}
           />
+          
         );
       }
       
@@ -22,18 +24,20 @@ function Carousel({productData}) {
         return (
           <div
             className={className}
-            style={{ ...style, display: "block", background: "green" }}
+            style={{ ...style, display: "block", opacity:"1" }}
             onClick={onClick}
           />
         );
       }
 
     var settings = {
-        dots: true,
+        dots: false,
         infinite: false,
-        speed: 500,
+        speed: 700,
         slidesToShow: 4,
         slidesToScroll: 4,
+        // adaptiveHeight: true,
+        // variableWidth: true,
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,
         initialSlide: 0,
@@ -67,7 +71,7 @@ function Carousel({productData}) {
   return (
     <div>
       <Slider {...settings}>
-        {productData.map((item,index) => (
+        {filteredProducts?.map((item,index) => (
           <ProductCard key={index} {...item}/>
         ))}
       </Slider>

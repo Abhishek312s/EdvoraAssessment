@@ -11,7 +11,9 @@
 
 .card-subcontainer{
     display: flex;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
+    /* overflow-y: hidden; */
+    /* height: 160px; */
     /* justify-content: space-evenly; */
     /* flex-wrap: wrap; */
 }
@@ -59,8 +61,8 @@
     display: inline-block;
     /* width: 50%; */
     /* border: 2px solid red; */
-    margin-top: 8px;
-    font-size: 1.3rem;
+    margin-top: 20px;
+    font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.6);
 }
 .card-subcontainer #date{
