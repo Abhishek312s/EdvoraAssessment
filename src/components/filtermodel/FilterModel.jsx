@@ -1,7 +1,7 @@
 import React from "react";
 import "./filterModel.css";
 
-function FilterModel({productData,searchHandle}) {
+function FilterModel({productData,stateFilterHandle,cityFilterHandle,productFilterHandle}) {
 
   // console.log(productData);
 
@@ -15,26 +15,26 @@ function FilterModel({productData,searchHandle}) {
       <div className="filter-wrapper">
         <div className="filter-container">
           <div>
-            <input type="text" placeholder="Filters" onChange={(e)=>searchHandle(e.target.value)} />
+            <input type="text" placeholder="Filters" onChange={(e)=>productFilterHandle(e.target.value)} />
           </div>
 
           <div className="filters">
 
-              <select name="products" id="products">
+              <select onChange={(e)=>productFilterHandle(e.target.value)} name="products" id="products">
 
-                <option hidden selected value="">Products</option>
+                <option hidden value="">Products</option>
                 {uniqueProducts.map((item,index)=>{
                   return(
-                <option key={index} value={item}>{item}</option> 
+                <option key={index}  value={item}>{item}</option> 
                 )})}
                 <option value="">None</option>
 
               </select>
 
 
-              <select name="states" id="states">
+              <select onChange={(e)=>stateFilterHandle(e.target.value)} name="states" id="states">
 
-              <option hidden selected value="">States</option>
+              <option hidden value="">States</option>
                 {uniqueStates.map((item,index)=>{
                   return(
                 <option key={index} value={item}>{item}</option> 
@@ -43,9 +43,9 @@ function FilterModel({productData,searchHandle}) {
 
               </select>
 
-              <select name="cities" id="cities">
+              <select onChange={(e)=>cityFilterHandle(e.target.value)}  name="cities" id="cities">
 
-              <option hidden selected value="">Cities</option>
+              <option hidden value="">Cities</option>
                 {uniqueCities.map((item,index)=>{
                   return(
                 <option key={index} value={item}>{item}</option> 
