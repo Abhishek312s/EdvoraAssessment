@@ -6,64 +6,34 @@ import ProductCard from "../productcard/ProductCard";
 
 function Carousel({filteredProducts}) {
 
-  // console.log(filteredProducts)
-    function SampleNextArrow(props) {
-        const { className, style, onClick } = props;
-        return (
-          <div
-            className={className}
-            style={{ ...style, display: "block"}}
-            onClick={onClick}
-          />
-          
-        );
-      }
-      
-      function SamplePrevArrow(props) {
-        const { className, style, onClick } = props;
-        return (
-          <div
-            className={className}
-            style={{ ...style, display: "block", opacity:"1" }}
-            onClick={onClick}
-          />
-        );
-      }
-
     var settings = {
         dots: false,
         infinite: false,
         speed: 700,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        // adaptiveHeight: true,
-        // variableWidth: true,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />,
+        slidesToShow: filteredProducts?.length < 4 ? filteredProducts?.length : 4,
+        slidesToScroll: filteredProducts?.length < 4 ? filteredProducts?.length : 4,
         initialSlide: 0,
         responsive: [
           {
-            breakpoint: 1024,
+            breakpoint: 1480,
             settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
+              slidesToShow: filteredProducts?.length < 3 ? filteredProducts?.length : 3,
+              slidesToScroll: filteredProducts?.length < 3 ? filteredProducts?.length : 3,
             }
           },
           {
-            breakpoint: 600,
+            breakpoint: 1070,
             settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              initialSlide: 2
+              slidesToShow: filteredProducts?.length < 2 ? 1 : 2,
+              slidesToScroll: filteredProducts?.length < 2 ? 1 : 2,
+              initialSlide: 2,
             }
           },
           {
-            breakpoint: 480,
+            breakpoint: 880,
             settings: {
               slidesToShow: 1,
-              slidesToScroll: 1
+              slidesToScroll: 1,
             }
           }
         ]

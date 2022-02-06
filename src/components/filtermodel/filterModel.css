@@ -39,6 +39,7 @@
     background-color: #232323;
     color: #fff;
     padding: 10px;
+    padding-right: 25px;
     border-radius: 5px;
     outline: none;
     border: none;
@@ -48,4 +49,13 @@
     background-size: auto 30%;
     appearance: none;
 }
+
+@media (max-width: 600px) {
+    .filter-wrapper {
+      order:2;
+      width: 250px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+  }
 

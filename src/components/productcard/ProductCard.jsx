@@ -12,17 +12,19 @@ function ProductCard(props) {
               src={props.image}
               alt="Product_Image"
             />
-            <span>{props.address.state}</span>
+            
           </div>
           <div className="content-container">
             <h3>{props.product_name}</h3>
             <h4>{props.brand_name}</h4>
             <p> &#36; {props.price}</p>
-            <span id="date">Date: {props.time.slice(0,10)}</span>
+            
           </div>
         </div>
-        
-        
+        <div className="state-time-wrapper">
+        <span>{props.address.state}</span>
+        <span id="date">Date: {props.time.slice(0,10)}</span>
+        </div>
         <p>{props.discription}</p>
       </div>
     </>

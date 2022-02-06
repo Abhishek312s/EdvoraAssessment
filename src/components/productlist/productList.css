@@ -5,13 +5,10 @@
     padding-bottom: 15px;
     font-weight: 300;
     font-size: 1.8rem;
-    margin-top: 25px;
+    margin-top: 15px;
     color: #fff;
 }
 
-/* .carousel-container{
-    background-color: aqua;
-} */
 .cards{
     background-color: #131313;
     margin: 10px 0;
@@ -19,6 +16,7 @@
     /* display: flex;
     justify-content: space-around; */
     max-width: 1150px;
+    min-width: 250px;
     /* max-height: 300px; */
     /* flex-direction: column; */
     margin-bottom: 10px;

@@ -4,12 +4,11 @@ import "./filterModel.css";
 function FilterModel({productData,stateFilterHandle,cityFilterHandle,productFilterHandle}) {
 
   // console.log(productData);
-
-  
-
   const uniqueProducts = [...new Set(productData.map(data => data.product_name))]
   const uniqueStates = [...new Set(productData.map(data => data.address.state))]
   const uniqueCities = [...new Set(productData.map(data => data.address.city))]
+
+  
   return (
     <>
       <div className="filter-wrapper">
@@ -22,10 +21,10 @@ function FilterModel({productData,stateFilterHandle,cityFilterHandle,productFilt
 
               <select onChange={(e)=>productFilterHandle(e.target.value)} name="products" id="products">
 
-                <option hidden value="">Products</option>
+                <option defaultValue={""} hidden value="">Products</option>
                 {uniqueProducts.map((item,index)=>{
                   return(
-                <option key={index}  value={item}>{item}</option> 
+                <option key={index} value={item}>{item}</option> 
                 )})}
                 <option value="">None</option>
 
